@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->float('price');
             $table->longText('description');
             $table->string('tags');
-            $table->foreignId('product_categories_id')->constrained();
+            $table->foreignId('product_category_id')->constrained();
             $table->softDeletes();
             $table->timestamps();
         });

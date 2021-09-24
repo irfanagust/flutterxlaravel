@@ -17,7 +17,7 @@ class CreateTransactionItemsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('product_id')->constrained();
-            $table->foreignId('transactions_id')->constrained();
+            $table->foreignId('transaction_id')->constrained();
             $table->bigInteger('quantity');
             $table->timestamps();
         });
