@@ -15,7 +15,7 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('users_id')->constrained();
             $table->text('address')->nullable();
             $table->float('total_price')->default(0);
             $table->float('shipping_price')->default(0);

@@ -15,9 +15,9 @@ class CreateTransactionItemsTable extends Migration
     {
         Schema::create('transaction_items', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('product_id')->constrained();
-            $table->foreignId('transaction_id')->constrained();
+            $table->foreignId('users_id')->constrained();
+            $table->foreignId('products_id')->constrained();
+            $table->foreignId('transactions_id')->constrained();
             $table->bigInteger('quantity');
             $table->timestamps();
         });

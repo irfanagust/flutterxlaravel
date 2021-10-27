@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TransactionItems extends Model
+class TransactionItem extends Model
 {
     use HasFactory;
 
@@ -13,11 +13,11 @@ class TransactionItems extends Model
 
     public function transaction()
     {
-        return $this->belongsTo(Transactions::class, 'transaction_id', 'id');
+        return $this->belongsTo(Transaction::class, 'transactions_id', 'id');
     }
 
     public function product()
     {
-        return $this->hasOne(Product::class, 'id', 'product_id');
+        return $this->hasOne(Product::class, 'id', 'products_id');
     }
 }
